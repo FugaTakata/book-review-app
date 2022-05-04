@@ -2,8 +2,9 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    "jest/globals": true,
   },
-  extends: ["plugin:react/recommended", "standard"],
+  extends: ["plugin:react/recommended", "standard", "prettier"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -12,6 +13,11 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint"],
-  rules: {},
+  settings: {
+    react: { version: "detect" },
+  },
+  plugins: ["react", "@typescript-eslint", "jest"],
+  rules: {
+    "react/react-in-jsx-scope": "off",
+  },
 };
