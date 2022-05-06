@@ -4,7 +4,12 @@ module.exports = {
     es2021: true,
     "jest/globals": true,
   },
-  extends: ["plugin:react/recommended", "standard", "prettier"],
+  extends: [
+    "plugin:react/recommended",
+    "standard",
+    "plugin:react-hooks/recommended",
+    "prettier",
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -45,5 +50,7 @@ module.exports = {
         "newlines-between": "always",
       },
     ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
   },
 };
