@@ -1,18 +1,18 @@
-import * as React from "react";
+import { createRoot } from "react-dom/client";
 
 import { ColorModeScript } from "@chakra-ui/react";
-import ReactDOM from "react-dom";
 
 import { App } from "./App";
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(
-  <React.StrictMode>
+const container = document.getElementById("root");
+const root = createRoot(container!);
+root.render(
+  <>
     <ColorModeScript />
     <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </>
 );
 
 // If you want your app to work offline and load faster, you can change
