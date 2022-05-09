@@ -21,9 +21,11 @@ module.exports = {
   settings: {
     react: { version: "detect" },
   },
-  plugins: ["react", "@typescript-eslint", "jest", "import"],
+  plugins: ["react", "@typescript-eslint", "jest", "import", "unused-imports"],
   rules: {
     "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "warn",
     "import/order": [
       "error",
       {
