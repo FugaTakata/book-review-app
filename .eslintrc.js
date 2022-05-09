@@ -24,6 +24,7 @@ module.exports = {
   plugins: ["react", "@typescript-eslint", "jest", "import", "unused-imports"],
   rules: {
     "react/react-in-jsx-scope": "off",
+    "no-unused-vars": "warn",
     "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "warn",
     "import/order": [
